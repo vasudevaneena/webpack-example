@@ -1,0 +1,18 @@
+@import "../../styles/config.scss";
+.desktop-height{
+    margin-top:20px;
+    margin-bottom:20px;
+    height: 80vh;
+    border: 1px solid $color-border;
+    overflow-y: scroll;
+    background-color: $color-background;
+}
+button{
+    border-radius: 3px;
+}
+.right-spacing{
+    margin-right: 20px;
+}
+img{
+    height:32px;
+}
