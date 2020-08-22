@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const Service = {
-  getCapsules(url) {
+  getApiData(url) {
     return new Promise((resolve, reject) => {
       axios
         .get(url)

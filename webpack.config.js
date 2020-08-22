@@ -1,7 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const isDevelopment = process.env.NODE_ENV === 'development'
-
+const MediaQueryPlugin = require('media-query-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     entry:'./src/index.js',
     output:{
@@ -51,6 +52,7 @@ module.exports = {
                         loader: [
                           'style-loader',
                           'css-loader',
+                          MediaQueryPlugin.loader,
                           {
                             loader: 'sass-loader',
                             options: {
@@ -59,6 +61,16 @@ module.exports = {
                           }
                         ]
                      },
+                  //    {
+                  //     test: /\.scss$/,
+                  //     use: [
+                  //        // MiniCssExtractPlugin.loader,
+                  //        'style-loader',
+                  //         'css-loader',
+                  //         MediaQueryPlugin.loader,
+                  //         'sass-loader'
+                  //     ]
+                  // },
                      {
                       // Now we apply rule for images
                       test: /\.(png|jpe?g|gif|svg)$/,

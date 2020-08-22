@@ -1,7 +1,9 @@
 import {
   FETCH_CAPSULES_REQUEST,
   FETCH_CAPSULES_SUCCESS,
-  FETCH_CAPSULES_FAILURE
+  FETCH_CAPSULES_FAILURE,
+  FETCH_LANDING_PAD_SUCCESS,
+  FETCH_LANDING_PAD_FAILURE
 } from "./actionTypesConstant";
 
 const initialState = {
@@ -31,6 +33,18 @@ const reducer = (state = initialState, action) => {
         users: [],
         error: action.payload
       };
+      case FETCH_LANDING_PAD_SUCCESS:
+        return {
+          loading: false,
+          error: "",
+          users: action.payload
+        };
+      case FETCH_LANDING_PAD_FAILURE:
+        return {
+          loading: false,
+          users: [],
+          error: action.payload
+        };
     default:
       return state;
   }

@@ -2,17 +2,48 @@
 .desktop-height{
     margin-top:20px;
     margin-bottom:20px;
-    height: 80vh;
+    height: 70vh;
     border: 1px solid $color-border;
     overflow-y: scroll;
     background-color: $color-background;
 }
-button{
-    border-radius: 3px;
-}
+
 .right-spacing{
     margin-right: 20px;
 }
 img{
-    height:32px;
+    margin-top: 19px;
+    height: 60px;
+}
+// @media (max-width: 768px) {
+//     img {        
+//       // display: none;
+//       height: 90px;
+//     }
+//   }
+.control-console{
+    height: 20vh;
+    border: 1px solid black;
+    display: grid;  
+}
+// @media (max-width: 768px) {
+//     .control-console {        
+//       // display: none;
+//        border: 1px solid red;
+//     }
+//   }
+button{
+    border-radius: 3px;
+    height: 50px;
+    width: 110px;
+    margin: 20px;
+}
+
+input{
+       margin-top: 30px;
+      // margin-bottom: 15px;
+}
+.error{
+    color:red;
+    font-size:12px;
 }
